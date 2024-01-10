@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    ;
+}
+
+:root {
+    --color1: #D89584;
+    --color2: #F4F4F4;
+    --color3: #B30089;
+    --color4: #6a2e35;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    line-height: 1.5;
+}
+
+#presentation {
+    background-color: var(--color2);
+    min-height: 100vh;
+}
+
+div.cover {
+    background: url(../images/cover_overlay.png) no-repeat center/100% 100%, url(../images/cover.jpg) no-repeat center/cover;
+    height: 370px;
+    position: relative;
+    text-align: center;
+}
+
+img.cover-profile {
+    height: 100px;
+    margin-top: 50px;
+}
+
+.cover h2 {
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+div.cover p {
+    color: lightgray;
+    text-align: center;
+    /* margin-top: 8px; */
+    font-size: 14px;
+}
+
+
+div.cover-contact {
+    /* background-color: #FF000080; */
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border-left: 4px solid var(--color1);
+    padding-left: 8px;
+}
+
+div.cover-contact p {
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div.cover-contact p:first-child {
+    margin-bottom: 14px;
+}
+
+div.cover-contact * {
+    color: white;
+    font-size: 14px;
+}
+
+a.contact-button {
+    color: var(--color1);
+    border: 3px solid var(--color1);
+    padding: 8px 20px;
+    text-decoration: none;
+    background-color: #00000040;
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+a.contact-button:hover {
+    color: white;
+    border: 3px solid white;
+}
+
+
+
+div.separateur {
+    background-color: #979797;
+    height: 1px;
+    width: 150px;
+    position: relative;
+    left: 50%;
+    margin-left: -75px;
+    margin-bottom: 20px;
+}
+
+div.cover-text {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: auto;
+}
+
+div.cover-text p {
+    font-size: 22px;
+    color: #656565;
+    text-align: center;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover-link {
+    justify-content: center;
+    gap: 15px;
+    display: flex;
+    margin-top: 8px;
+}
+
+.link svg {
+    height: 24px;
+    width: 24px;
+    color: var(--color2);
+}
+
+
+.section {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    min-height: 100vh;
+}
+
+/* section portofolio */
+section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    color: #333;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+section .line {
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    background-color: var(--color1);
+    left: 0px;
+    bottom: -5px;
+    border-radius: 4px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px 40px;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    overflow: hidden;
+    flex: 1 1 50%;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-description {
+    padding: 10px;
+}
+
+.card-description div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-description p {
+    margin-bottom: 5px;
+}
+
+.card-description ul {
+    display: flex;
+    gap: 8px;
+}
+
+.card-description ul li {
+    color: var(--color4)
+}
+
+.card-description a {
+    color: var(--color4);
+    transition: all ease-in-out 0.2s;
+}
+
+svg {
+    height: 14px;
+    width: 14px;
+}
+
+/* section parcours*/
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--color2);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--color2);
+    border: 4px solid var(--color1);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--color2);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--color2);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--color2);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--color2) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: var(--color2);
+    position: relative;
+    border-radius: 6px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+    /* section parcours */
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid var(--color2);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--color2) transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+
+/* Media queries - Responsive timeline on screens less than 768px wide */
+@media screen and (max-width: 768px) {
+
+    /* section portofolio */
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+}
+
